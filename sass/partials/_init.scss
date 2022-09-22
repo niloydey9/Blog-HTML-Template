@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+// Foogle font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: #ddd;
+    font-size: 15px;
+    line-height: 1.5em;
+    color: #555;
+    font-weight: 300;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/************************* Baack to top buttom *************************/
+#scroll{
+    position: fixed;
+    right: 2%;
+    bottom: 6%;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    display: none;
+    z-index: 99999;
+    padding: 2px 1px 0 0;
+    background: $primary-color;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    span{
+        display: inline-block;
+        content: "";
+        width: 9px;
+        height: 9px;
+        transform: rotate(45deg);
+        border-top: 2px solid #EDF1F5;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid #EDF1F5;
+        margin-top: 18px;
+    }
+    &:hover{
+        background-color: $secondary-color;
+    }
+}
